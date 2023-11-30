@@ -1,0 +1,20 @@
+FUNCTION quick_sort(items):
+  #Base case: stop when the partition contains a single item
+  IF items.length <= 1:
+    RETURN items
+  #Otherwise create smaller And larger sublists And recursively call
+  #quick_sort on those sublists And recombine the sorted lists with the pivot
+  ELSE:
+      #Set pivot as first value and create empty smaller And larger lists
+      pivot_value = items[0]
+      smaller = []
+      larger = []
+      FOR i = 1 TO items.length:
+        If items[i] < pivot_value:
+          smaller.append(items[i])
+        else:
+          larger.append(items[i])
+  RETURN quick_sort(smaller) + [pivot_value] + quick_sort(larger)
+End function
+
+
