@@ -1,6 +1,6 @@
 FUNCTION quick_sort(items):
   #Base case: stop when the partition contains a single item
-  IF items.length <= 1:
+  if items.length <= 1:
     RETURN items
   #Otherwise create smaller And larger sublists And recursively call
   #quick_sort on those sublists And recombine the sorted lists with the pivot
